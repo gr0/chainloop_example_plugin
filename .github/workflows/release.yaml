@@ -28,6 +28,10 @@ jobs:
         run: |
           chainloop gather-runner-context
 
+      - name: Show runner context data
+        run: |
+          cat ./runner-context.json
+
       - name: Add runner context material to attestation
         run: |
           chainloop att add --value ./runner-context.json
