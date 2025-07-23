@@ -31,3 +31,5 @@ go build -o plugin ./cmd/
 ```bash
 mv plugin "$HOME/Library/Application Support/chainloop/plugins/"
 ```
+
+## Test change
