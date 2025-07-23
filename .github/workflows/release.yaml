@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Chainloop
         run: |
-          ./install.sh --with-platform-plugin
+          curl -sfL https://dl.chainloop.dev/cli/install.sh | bash -s -- --with-platform-plugin
 
       - name: Gather runner context data
         run: |
