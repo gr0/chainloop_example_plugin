@@ -3,7 +3,7 @@ name: Release Canary Backend
 on:
   push:
     branches:
-      - 'v*'
+      - '*'
 
 jobs:
   build_and_package:
@@ -15,6 +15,7 @@ jobs:
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -26,7 +27,7 @@ jobs:
 
       - name: Gather runner context data
         run: |
-          chainloop gather-runner-context
+          chainloop gather-runner-context --runner-token ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
       - name: Show runner context data
         run: |
