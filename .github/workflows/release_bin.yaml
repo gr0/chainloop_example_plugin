@@ -20,6 +20,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Build plugin
+        run: |
+          pwd
+
       - name: Show runner context data
         run: |
           ./plugin
