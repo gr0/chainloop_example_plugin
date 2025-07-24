@@ -24,4 +24,4 @@ jobs:
 
       - name: Show
         run: |
-          cat ./runner-context.json
+          ls
