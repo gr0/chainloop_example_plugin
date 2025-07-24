@@ -3,7 +3,7 @@ name: Release Canary Backend
 on:
   push:
     branches:
-      - '*'
+      - 'v*'
 
 jobs:
   build_and_package:
