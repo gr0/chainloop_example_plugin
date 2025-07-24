@@ -18,6 +18,9 @@ jobs:
       security-events: write
       statuses: write
 
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
